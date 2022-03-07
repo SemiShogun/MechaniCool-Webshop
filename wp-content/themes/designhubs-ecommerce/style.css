@@ -1,0 +1,292 @@
+/*
+ Theme Name:   DesignHubs Ecommerce
+ Theme URI:    https://www.xeeshop.com/product/designhubs-ecommerce-pro/
+ Description:  Designhubs Ecommerce theme is a child theme of Designhubs Wordpress Theme. Designhubs Ecommerce is a modern and professional multipurpose WordPress theme. This theme fully customizable & beautiful WordPress theme. Designhubs Ecommerce theme easy to customize with Customizer theme options. This theme is supported for WooCommerce. This theme highly-customizable features and sections are completely responsive.
+ Template:     designhubs
+ Version:      1.0.1
+ Author:       reviewexchanger
+ Author URI:   https://www.xeeshop.com/
+ License: GPLv3 or later
+ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+ Tags:         custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+ Text Domain:  designHubs-ecommerce
+ Tested up to: 5.8
+ Requires PHP: 5.6
+*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Our Team
+--------------------------------------------------------------*/
+.our_team_img img {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    transition: all 0.2s linear;
+}
+.our_team_container:hover .our_team_img img {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    filter: blur(1px);
+}
+.our_team_data .our_team_container:hover .our_team_img:after{
+	background-color: unset;
+}
+
+/*--------------------------------------------------------------
+# Our portfolio
+--------------------------------------------------------------*/
+.our_portfolio_container:hover .our_port_containe {
+    transform: scale(1);
+}
+.our_portfolio_container .our_port_containe {
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition-property: transform;
+    /* transition-duration: 0.5s; */
+    transition-timing-function: ease-out;
+    flex-direction: column;
+}
+.our_port_containe .our_portfolio_btn a {
+    padding: unset;
+}
+.our_port_containe .our_portfolio_btn i {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    line-height: 33px;
+}
+.our_portfolio_container .our_portfolio_title {
+    opacity: 0;
+    transform: translateY(-150%);
+    padding: 1.375rem 1.875rem;
+    background-color: unset !important;
+    border-radius: unset;
+    visibility: hidden;
+    transition: all .75s cubic-bezier(.645,.045,.355,1);
+}
+.our_port_containe .our_portfolio_btn {
+    border-radius: 100px;
+}
+.our_services_section_data .our_services_data:hover:before {
+    right: 0;
+    opacity: 1;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    transition: all .5s;
+}
+.our_services_section_data .our_services_data:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    right: -100%;
+    left: auto;
+    opacity: 0;
+    transition: all 150ms ease-in-out 200ms;
+    border-radius: unset;
+    transform: unset;
+}
+.our_services_data:hover:after {
+    left: 0;
+    opacity: 1;
+    transition: all .5s;
+    width: 100%;
+    height: 50%;
+}
+.our_services_data:after {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    height: 50%;
+    width: 100%;
+    left: -100%;
+    transition: all 150ms ease-in-out 200ms;
+}
+.our_services_data .theme-item-overlay:after{
+	content: unset;
+}
+
+.featured_slider_image .hentry-inner .entry-container{
+	background: unset !important;
+}
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about_featured_image {
+    margin-top: 22px;
+    /* margin-left: 22px; */
+    position: relative;
+    display: inline-block;
+}
+.about_featured_image:before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    top: -22px;
+    right: -22px;
+    bottom: 22px;
+    left: 22px;
+    z-index: 0;
+    /* transform: translate3d(22px, -22px, -22px); */
+    background: #245d6c;
+    border-radius: 4px;
+    /*border: 2px solid #245d6c;
+    border: 2px solid #245d6c;*/
+}
+.about_featured_image img {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+}
+.about_section_container .about_featured_image {
+    padding-right: 0px;
+}
+.about_section_container .about_container_data {
+    padding-left: 40px;
+}
+
+/*--------------------------------------------------------------
+# Our Testimonial
+--------------------------------------------------------------*/
+.our_testimonial_data .our_testimonial_data_info {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px;
+    border: 0px;
+    background: unset;
+    color: unset;
+}
+.our_testimonial_data .our_testimonial_data_info:hover {
+    border-top: unset !important;
+}
+.our_testimonial_data .testimonials_disc {
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 22px;
+    box-shadow: none;
+    transition: 0.4s;
+    cursor: grab;
+}
+.our_testimonial_data .testimonials_disc:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -23px;
+    content: "\f0dd";
+    display: inline-block;
+    font: normal normal normal 45px/1 'FontAwesome';
+    font-size: 45px;
+    line-height: 1.2;
+}
+
+/*--------------------------------------------------------------
+# Our ProjectManager
+--------------------------------------------------------------*/
+.designhubs_projectmanager_contain h1, .designhubs_projectmanager_contain h2 {
+    margin: 0px;
+}
+.designhubs_projectmanager_section {
+    padding: 30px 0px;
+}
+.designhubs_projectmanager_info {
+    display: flex;
+    justify-content: space-between;
+}
+.designhubs_projectmanager_image {
+    width: 50%;
+    flex: 0 0 41.666667%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.designhubs_projectmanager_image img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+.designhubs_projectmanager_contain {
+    width: 50%;
+}
+.our_projectmanager_icon {
+    margin-right: 15px;
+}
+.our_projectmanager_icon_data {
+    display: flex;
+}
+a.projectmanager_social_icon {
+    display: block;
+    width: 55px;
+    height: 55px;
+    line-height: 59px;
+    border-radius: 50%;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    text-align: center;
+    text-decoration: none;
+}
+.projectmanager_social_icon i {
+    font-size: 22px;
+}
+a.projectmanager_social_icon:hover i {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+@media only screen and (max-width: 768px) {
+	.designhubs_projectmanager_section {
+	    padding: 30px 10px;
+	}
+	.designhubs_projectmanager_contain {
+	    text-align: center;
+	}
+	.designhubs_projectmanager_info {
+	    display: flex;
+	    justify-content: space-between;
+	    flex-direction: column;
+	}
+	.designhubs_projectmanager_image, .designhubs_projectmanager_contain{
+		width: 100%;
+	}
+	.our_projectmanager_icon_data {
+	    display: flex;
+	    justify-content: center;
+	}
+	.our_projectmanager_icon_data {
+	    display: flex;
+	    justify-content: center;
+	}
+	.theme_section_info .featured_slider_image .hentry-inner .entry-container{
+		margin-left: 0px;
+    	margin-right: 0px;
+	}
+	.theme_section_info .featured_slider_image .hentry-inner .entry-container {
+	    padding: 40px 25px;
+	}
+}
